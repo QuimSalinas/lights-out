@@ -104,7 +104,7 @@ class Board extends Component {
   render() {
     return(
       <div className="Board">
-      <h1><span className="Board-title1">LIGHTS</span><span className="Board-title2">OUT</span></h1>
+      <h1><span className={this.state.hasWon?"Gray-title":"Board-title1"}>LIGHTS</span><span className={this.state.hasWon?"Gray-title":"Board-title2"}>OUT</span></h1>
       {
           this.state.hasWon
         ? <h2><span className="Board-title2">YOU</span> <span className="Board-title1">WIN</span></h2>
