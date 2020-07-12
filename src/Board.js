@@ -113,7 +113,7 @@ class Board extends Component {
               <tbody>
                 {this.state.board.map((row,rowidx)=>
                   <tr key={rowidx}>
-                    {row.map((column,colidx)=><Cell key={`${colidx}-${rowidx}`} isLit={column} flipCellsAroundMe={this.flipCellsAround} coords={`${rowidx}-${colidx}`}/>)}
+                    {row.map((column,colidx)=><Cell key={`${colidx}-${rowidx}`} isLit={column} flipCellsAroundMe={this.flipCellsAround({`${colidx}-${rowidx}`})} coords={`${rowidx}-${colidx}`}/>)}
                   </tr>)}
               </tbody>
             </table>
